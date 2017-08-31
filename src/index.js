@@ -118,7 +118,7 @@ function calculator(num = 0) {
       for (var i = 0; i < args.length; i++) {
 
         let number = args[i];
-        if (isNaN(+number)) badProp(number);
+        if (isNaN(+number)) throw new badProp(number);
         num -= number;
 
       }
@@ -130,7 +130,7 @@ function calculator(num = 0) {
       for (var i = 0; i < args.length; i++) {
 
         let number = args[i];
-        if (isNaN(+number)) badProp(number);
+        if (isNaN(+number)) throw new badProp(number);
         if (number === 0) throw new Error('division by 0');
         num /= number;
 
@@ -143,7 +143,7 @@ function calculator(num = 0) {
       for (var i = 0; i < args.length; i++) {
 
         let number = args[i];
-        if (isNaN(+number)) badProp(number);
+        if (isNaN(+number)) throw new badProp(number);
         num *= number;
 
       }
